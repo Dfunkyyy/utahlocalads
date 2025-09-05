@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Focus on Utah | Utah Local Ads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICAgIDxwYXRoIGQ9Ik01MCA1TDkgOTVoODJjLTIuMTItMjguMzgtMjcuMzMtNDYuNDctMzEuMTUtNTAuMDIiIGZpbGw9IiM0YTU1NjgiLz4KICAgIDxyZWN0IHg9IjQ0IiB5PSIzMCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjEyIiBmaWxsPSIjYmJiYmJiIiByeD0iMyIvPgo8cGF0aCBkPSJNNTkgNDdhOSA5IDAgMCAxLTIgNmMxLjgyLTMuMDcgMy45Ni00LjgyIDguNTYtNC4wMi0yLjE4LTMuNzYtMS42NS0xLjIxLTYuNTYtMS45OHoiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2U9IiNiYmJiYmIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center text-2xl font-bold text-blue-600">
+                Utah Local Ads
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="/services.html" class="hover:text-blue-600 transition-colors">Services</a>
+                <a href="/utah-focus.html" class="hover:text-blue-600 transition-colors">Why Utah?</a>
+                <a href="/pricing.html" class="hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="/contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <nav class="flex flex-col space-y-2 p-4">
+                <a href="/services.html" class="block py-2 hover:bg-gray-100 rounded-md transition-colors">Services</a>
+                <a href="/utah-focus.html" class="block py-2 hover:bg-gray-100 rounded-md transition-colors">Why Utah?</a>
+                <a href="/pricing.html" class="block py-2 hover:bg-gray-100 rounded-md transition-colors">Pricing</a>
+                <a href="/contact.html" class="block py-2 hover:bg-gray-100 rounded-md transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-gray-50 p-10 rounded-xl shadow-md border border-gray-200">
+                <div class="text-blue-500 mb-4">
+                    <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"></path></svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Commitment to Utah Businesses</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We're not just a digital marketing agency; we're a local partner. Our deep understanding of the Utah market, its unique communities, and local search trends allows us to create ad campaigns that truly resonate with your target audience. We know what it takes to stand out in the beehive state.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Utah Local Ads. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
