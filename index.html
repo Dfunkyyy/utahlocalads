@@ -3,256 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utah Local Ads | High-Performance Marketing & Lead Gen</title>
+    <title>Utah Local Ads | High-Performance Acquisition & Scale</title>
     
-    <!-- Explicitly tells Google and other search engines that this page is allowed to be indexed and followed -->
+    <!-- SEO & Indexing Infrastructure -->
     <meta name="robots" content="index, follow">
-    
-    <!-- Defines the primary/master URL for this page to prevent duplicate content issues in search results -->
     <link rel="canonical" href="https://utahlocalads.com/">
-    
+    <meta name="description" content="We engineer premium direct-response frameworks, paid acquisition funnels, and tracking infrastructure to scale local businesses efficiently.">
+
+    <!-- Lucide Icons & Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+
     <style>
         :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --accent: #2563eb;
+            --bg-main: #0b0f19;
+            --bg-card: #131926;
+            --bg-card-hover: #171f30;
+            --accent-glow: rgba(37, 99, 235, 0.15);
+            --accent-solid: #2563eb;
             --accent-hover: #3b82f6;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --card-border: #334155;
+            --text-pure: #ffffff;
+            --text-body: #94a3b8;
+            --border-color: #1e293b;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            line-height: 1.5;
-            padding: 0 1rem;
+            background-color: var(--bg-main);
+            color: var(--text-pure);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1100px;
+        .wrapper {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 0;
+            padding: 0 1.5rem;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 5rem;
+        /* Nav Bar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .logo {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--accent-hover);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-
-        h1 {
-            font-size: 3rem;
+        .brand-logo {
             font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero-subtitle {
             font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2.5rem auto;
+            letter-spacing: -0.02em;
+            color: var(--text-pure);
         }
 
-        .cta-btn {
+        .brand-logo span {
+            color: var(--accent-solid);
+        }
+
+        .nav-cta {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-pure);
+            padding: 0.5rem 1.2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--text-pure);
+            color: var(--bg-main);
+        }
+
+        /* Hero Layout mimicking premium multi-column agency flows */
+        .hero-section {
+            padding: 6rem 0 4rem 0;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            background: var(--accent-glow);
+            color: var(--accent-hover);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: var(--accent);
-            color: white;
-            text-decoration: none;
-            padding: 0.85rem 2rem;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.2s ease;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            margin-bottom: 1.5rem;
         }
 
-        .cta-btn:hover {
-            background-color: var(--accent-hover);
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
         }
 
-        .grid {
+        h1 span {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-p {
+            font-size: 1.15rem;
+            color: var(--text-body);
+            margin-bottom: 2.5rem;
+            max-width: 620px;
+        }
+
+        /* Trust & Social Proof Architecture */
+        .v-proof-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .stat-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            margin-bottom: 5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 2.5rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+        .stat-val {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-pure);
+            letter-spacing: -0.02em;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: #475569;
+        .stat-lbl {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .icon-wrapper {
-            color: var(--accent-hover);
-            margin-bottom: 1.25rem;
-            display: inline-block;
-        }
-
-        h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .highlight-list {
-            list-style: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--card-border);
-        }
-
-        .highlight-list li {
+        .review-snippet {
             font-size: 0.9rem;
-            color: var(--text-main);
+            color: var(--text-body);
+            font-style: italic;
+            position: relative;
+        }
+
+        .review-author {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-pure);
+            font-style: normal;
+            font-weight: 600;
         }
 
-        .highlight-list i {
-            color: var(--accent-hover);
-            font-size: 0.8rem;
-        }
-
-        footer {
+        /* Main Offer Grid */
+        .services-header {
             text-align: center;
-            border-top: 1px solid var(--card-border);
-            padding-top: 3rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            padding: 6rem 0 3rem 0;
         }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 2.25rem; }
-            .container { padding: 2.5rem 0; }
+        .services-header h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .services-header p {
+            color: var(--text-body);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 8rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #334155;
+            background: var(--bg-card-hover);
+        }
+
+        .s-icon-box {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-hover);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-tag-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: auto;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .card-tag-list li {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.04);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            color: #cbd5e1;
+        }
+
+        /* Action Footer Setup */
+        .footer-cta-block {
+            background: linear-gradient(135deg, #131926 0%, #0b0f19 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-bottom: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-cta-block::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .footer-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--accent-solid);
+            color: var(--text-pure);
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: background 0.2s ease;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        .main-action-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        .sub-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-body);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 968px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 4rem 0 2rem 0;
+            }
+            h1 { font-size: 2.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <span class="logo">Utah Local Ads</span>
-            <h1>We Scale Local Businesses With High-Performance Marketing</h1>
-            <p class="hero-subtitle">Stop wasting ad spend. We engineer predictable lead generation frameworks and conversion-optimized funnels that turn local clicks into revenue.</p>
-            <a href="#book" class="cta-btn">Book a Strategy Call <i data-lucide="arrow-right"></i></a>
-        </header>
+    <div class="wrapper">
+        <nav>
+            <div class="brand-logo">Utah Local Ads<span>.</span></div>
+            <a href="#book-strategy" class="nav-cta">Book Call</a>
+        </nav>
 
-        <section class="grid">
-            <!-- Paid Social -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="instagram" size="28"></i></div>
-                <h3>Facebook &amp; Instagram Ads</h3>
-                <p>Data-driven audience targeting and hyper-localized campaigns built to dominate your market feed and capture high-intent buyers.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> Custom Audience Matching</li>
-                    <li><i data-lucide="check"></i> Retargeting Funnel Architecture</li>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div>
+                <div class="hero-badge">
+                    <i data-lucide="shield-check" size="14"></i> Enterprise-Grade Local Growth
+                </div>
+                <h1>Built to Scale <span>Local Businesses</span> to 8 Figures.</h1>
+                <p class="hero-p">We architect high-volume paid acquisition channels, handle complex conversion tracking hurdles, and deploy direct-response assets to systematically scale local visibility and revenue.</p>
+                <a href="#book-strategy" class="main-action-btn">Book a Strategy Call <i data-lucide="arrow-right" size="18"></i></a>
+            </div>
+
+            <!-- Sleek Performance Box Meta Elements -->
+            <div class="v-proof-box">
+                <div class="stat-row">
+                    <div>
+                        <div class="stat-val">15.5M+</div>
+                        <div class="stat-lbl">Aggregate Views</div>
+                    </div>
+                    <div>
+                        <div class="stat-val">1M+</div>
+                        <div class="stat-lbl">Leads Generated</div>
+                    </div>
+                </div>
+                <div class="review-snippet">
+                    "They built out the backend tracking structures and processes for my business to actually thrive once the localized ad traffic began scaling hard."
+                    <div class="review-author">
+                        <i data-lucide="badge-check" size="16" style="color: var(--accent-hover);"></i> Verified Business Partner
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Mechanics Section -->
+        <section class="services-header">
+            <h2>The Growth Framework</h2>
+            <p>Predictable user acquisition doesn't happen by accident. We own the entire conversion engine.</p>
+        </section>
+
+        <section class="services-grid">
+            <!-- 1. FB & IG Ads -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="layers" size="22"></i></div>
+                    <h3>Facebook &amp; Instagram Ads</h3>
+                    <p>Hyper-targeted local campaigns built to command top-of-feed presence and feed high-intent prospects straight into your funnels.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>Audience Exclusions</li>
+                    <li>Retargeting Funnels</li>
                 </ul>
             </div>
 
-            <!-- Copywriting -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="file-text" size="28"></i></div>
-                <h3>Conversion Copywriting</h3>
-                <p>Direct-response copy written to handle objections upfront, command attention, and drive immediate user action.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> High-Converting Ad Formats</li>
-                    <li><i data-lucide="check"></i> Landing Page Copy Overhauls</li>
+            <!-- 2. Copywriting -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="terminal" size="22"></i></div>
+                    <h3>Direct-Response Copywriting</h3>
+                    <p>Engineered messaging explicitly written to capture attention immediately, break conversion friction, and systematically overcome regional objections.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>Angle Testing</li>
+                    <li>Ad Creative Hooks</li>
                 </ul>
             </div>
 
-            <!-- Lead Generation -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="users" size="28"></i></div>
-                <h3>Predictable Lead Generation</h3>
-                <p>Consistent, automated systems designed to fill your sales pipeline with qualified, exclusive local prospects.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> CRM Integration &amp; Setup</li>
-                    <li><i data-lucide="check"></i> Automated Instant Follow-Ups</li>
+            <!-- 3. Lead Generation -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="target" size="22"></i></div>
+                    <h3>Predictable Lead Generation</h3>
+                    <p>Automated front-end workflows built to capture high-value prospective clients and keep client sales pipelines reliably packed.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>CRM Workflows</li>
+                    <li>Instant Follow-ups</li>
                 </ul>
             </div>
 
-            <!-- Conversion Optimization -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="trending-up" size="28"></i></div>
-                <h3>Conversion Optimization</h3>
-                <p>Systematic page, flow, and offer auditing to squeeze maximum return on investment out of every single dollar of daily spend.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> Friction-Free Booking Paths</li>
-                    <li><i data-lucide="check"></i> Technical Conversion Tracking</li>
+            <!-- 4. Conversion Optimization -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="activity" size="22"></i></div>
+                    <h3>Conversion Optimization</h3>
+                    <p>Deep-dive landing page and offer audits designed to clean up performance bottlenecks and safely expand scale limits.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>Data Infrastructure</li>
+                    <li>Offer Optimization</li>
                 </ul>
             </div>
 
-            <!-- Creative Strategy -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="sparkles" size="28"></i></div>
-                <h3>Creative Strategy</h3>
-                <p>Developing conversion-focused visual concepts, angles, and structures engineered specifically to break through the noise.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> Frameworks for High-Retention Hooks</li>
-                    <li><i data-lucide="check"></i> Systematic Creative Testing</li>
+            <!-- 5. Creative Strategy -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="cpu" size="22"></i></div>
+                    <h3>Creative Strategy</h3>
+                    <p>Systematic development of conversion-focused asset frameworks, scripting hooks, and high-retention variation tests.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>Asset Variations</li>
+                    <li>Retention Hooks</li>
                 </ul>
             </div>
 
-            <!-- Local Business Marketing -->
-            <div class="card">
-                <div class="icon-wrapper"><i data-lucide="map-pin" size="28"></i></div>
-                <h3>Local Business Marketing</h3>
-                <p>Tailored acquisition models focused completely on geographical dominance, cost-per-acquisition scaling, and volume generation.</p>
-                <ul class="highlight-list">
-                    <li><i data-lucide="check"></i> Geo-Targeted Spend Scaling</li>
-                    <li><i data-lucide="check"></i> Local Offer Architecture</li>
+            <!-- 6. Local Business Marketing -->
+            <div class="service-card">
+                <div>
+                    <div class="s-icon-box"><i data-lucide="map" size="22"></i></div>
+                    <h3>Local Business Marketing</h3>
+                    <p>Bespoke acquisition structures mapped entirely around localized market capture and geographic ad spend efficiency.</p>
+                </div>
+                <ul class="card-tag-list">
+                    <li>Geo-Target Scaling</li>
+                    <li>Market Dominance</li>
                 </ul>
             </div>
         </section>
 
-        <footer id="book">
-            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">Ready to Scale Daily Budgets Efficiently?</h2>
-            <p style="max-width: 500px; margin: 0 auto 2rem auto;">Let's audit your current landing pages, creative assets, and tracking infrastructure to find the bottlenecks.</p>
-            <!-- Replace the URL with your actual booking link (Calendly, Fillout, Loom, etc.) -->
-            <a href="https://calendly.com/yourusername/strategy-call" class="cta-btn" style="margin-bottom: 4rem;">Claim Your Strategy Slot <i data-lucide="calendar"></i></a>
-            <p>&copy; 2026 Utah Local Ads. All rights reserved.</p>
+        <!-- Dynamic Action Close -->
+        <section class="footer-cta-block" id="book-strategy">
+            <div class="footer-inner">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.03em;">Ready to Remove Your Scaling Bottlenecks?</h2>
+                <p style="color: var(--text-body); max-width: 580px; margin: 0 auto 2.5rem auto; font-size: 1.05rem;">Let's audit your current landing page optimization layout, funnel math, and tracking setups to extract more margin from your daily spend.</p>
+                <!-- Connect booking widget link here -->
+                <a href="#" class="main-action-btn">Claim Your Strategy Session <i data-lucide="calendar" size="18"></i></a>
+            </div>
+        </section>
+
+        <footer class="sub-footer">
+            <div>&copy; 2026 Utah Local Ads. Engineering Predictable Scale.</div>
+            <div>All Rights Reserved.</div>
         </footer>
     </div>
 
     <script>
-        // Initializes clean icons
+        // Runs instant icon rendering engines cleanly
         lucide.createIcons();
     </script>
 </body>
