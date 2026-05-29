@@ -69,17 +69,8 @@
         .brand-logo-wrapper {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
             text-decoration: none;
             color: var(--clr-slate-dark);
-        }
-
-        .brand-logo-img {
-            width: 42px;
-            height: 42px;
-            object-fit: contain;
-            border-radius: 8px;
-            border: 1px solid var(--clr-border);
         }
 
         .brand-name {
@@ -172,9 +163,17 @@
         }
 
         .hero-p {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
+            font-weight: 600;
             color: var(--clr-slate-muted);
             margin-bottom: 2.5rem;
+        }
+
+        .hero-sub-text {
+            font-size: 1.05rem;
+            color: var(--clr-slate-muted);
+            margin-bottom: 2.5rem;
+            max-width: 550px;
         }
 
         .hero-cta {
@@ -197,7 +196,7 @@
             transform: translateY(-2px);
         }
 
-        /* Metric Graph Block - High Contrast Soft Blue & White Card */
+        /* Animated Ad Spend Chart Dashboard */
         .hero-dashboard {
             background-color: var(--clr-white);
             border: 1px solid var(--clr-border);
@@ -240,23 +239,55 @@
         .dash-chart {
             border-top: 1px dashed var(--clr-border);
             padding-top: 1.5rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            height: 100px;
+            height: 140px;
         }
 
         .chart-pillar {
-            width: 12%;
+            width: 11%;
             background-color: var(--clr-ice-bg);
-            border-radius: 4px 4px 0 0;
-            height: 15%;
+            border-radius: 6px 6px 0 0;
+            height: 0;
+            transform-origin: bottom;
+            animation: growBar 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        .chart-pillar.fill-sky {
+        /* Sequential Animation Delays for Month-over-Month growth effect */
+        .chart-pillar:nth-child(1) { animation-delay: 0.1s; --target-height: 12%; }
+        .chart-pillar:nth-child(2) { animation-delay: 0.2s; --target-height: 24%; }
+        .chart-pillar:nth-child(3) { animation-delay: 0.3s; --target-height: 18%; }
+        .chart-pillar:nth-child(4) { animation-delay: 0.4s; --target-height: 45%; }
+        .chart-pillar:nth-child(5) { animation-delay: 0.5s; --target-height: 35%; }
+        .chart-pillar:nth-child(6) { animation-delay: 0.6s; --target-height: 65%; }
+        .chart-pillar:nth-child(7) { 
+            animation-delay: 0.7s; 
+            --target-height: 95%; 
             background: linear-gradient(to top, var(--clr-sky-accent), #38bdf8);
-            box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+        }
+
+        @keyframes growBar {
+            to {
+                height: var(--target-height);
+            }
+        }
+
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.75rem;
+            padding: 0 4px;
+        }
+
+        .chart-labels span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--clr-slate-muted);
+            width: 11%;
+            text-align: center;
         }
 
         /* Core Specializations Section */
@@ -336,93 +367,46 @@
             font-size: 0.95rem;
         }
 
-        /* Founder/Authority Block in Light-Blue & White Theme */
-        .founder-section {
+        /* Experience & Track Record Section */
+        .track-record-section {
             background-color: var(--clr-ice-bg);
             padding: 7.5rem 0;
             border-top: 1px solid var(--clr-border);
             border-bottom: 1px solid var(--clr-border);
         }
 
-        .founder-grid {
+        .track-grid {
             display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
+            grid-template-columns: 1fr 1fr;
             gap: 5rem;
             align-items: center;
         }
 
-        .founder-visual {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            background-color: var(--clr-white);
-            border: 1px solid var(--clr-border);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-        }
-
-        .founder-visual img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
-        .founder-floating-card {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 1.5rem;
-            right: 1.5rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            padding: 1.25rem;
-            border-radius: 14px;
-            border: 1px solid var(--clr-border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .founder-title h4 {
-            font-weight: 800;
-            font-size: 1rem;
-            color: var(--clr-slate-dark);
-        }
-
-        .founder-title p {
-            font-size: 0.85rem;
-            color: var(--clr-slate-muted);
-            font-weight: 600;
-        }
-
-        .founder-li-icon {
-            color: var(--clr-sky-accent);
-            transition: color 0.2s ease;
-        }
-
-        .founder-li-icon:hover {
-            color: var(--clr-sky-hover);
-        }
-
-        .founder-stats {
+        .track-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            margin-top: 2.5rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid var(--clr-border);
+        }
+
+        .stat-card {
+            background-color: var(--clr-white);
+            border: 1px solid var(--clr-border);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
         }
 
         .stat-value {
-            font-size: 2.75rem;
+            font-size: 3rem;
             font-weight: 800;
             color: var(--clr-sky-accent);
             letter-spacing: -0.03em;
             line-height: 1.1;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--clr-slate-muted);
             font-weight: 600;
         }
@@ -530,13 +514,13 @@
 
         /* Responsive Breakpoint Adaptability */
         @media (max-width: 968px) {
-            .hero-grid, .founder-grid {
+            .hero-grid, .track-grid {
                 grid-template-columns: 1fr;
                 gap: 3.5rem;
             }
             h1 { font-size: 2.85rem; }
             .action-card h2 { font-size: 2.15rem; }
-            .nav-links { display: none; } /* Standard collapse for compact viewports */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -546,19 +530,17 @@
     <nav>
         <div class="container nav-container">
             <a href="#" class="brand-logo-wrapper">
-                <!-- Explicit verification of local logo asset parameters -->
-                <img src="utahlocalads_logo.jpeg" alt="Utah Local Ads Logo" class="brand-logo-img">
                 <span class="brand-name">Utah Local Ads<span>.</span></span>
             </a>
             <div class="nav-links">
                 <a href="#specializations">Specializations</a>
-                <a href="#about">About</a>
+                <a href="#track-record">Results</a>
                 <a href="https://calendly.com/danefunk/30min" target="_blank" class="nav-cta-btn">Book 15-Min Call</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Ice-Blue Layout -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-grid">
             <div>
@@ -566,27 +548,38 @@
                     <i data-lucide="award" size="14"></i> Direct-Response Focus
                 </div>
                 <h1>Turn Ad Spend Into A <span>Predictable Revenue</span> Engine.</h1>
-                <p class="hero-p">Utah Local Ads is a performance-driven advertising agency focused on helping businesses grow through strategic digital marketing solutions. We build scalable marketing systems that turn marketing into a predictable growth channel.</p>
+                <p class="hero-p">Performance Marketers Who Actually Care About Results.</p>
+                <p class="hero-sub-text">Utah Local Ads is a performance-driven advertising agency focused on helping businesses grow through strategic digital marketing solutions. We specialize in parsing data complexities and scaling setups safely to establish a reliable client acquisition framework.</p>
                 <a href="https://calendly.com/danefunk/30min" target="_blank" class="hero-cta">
                     Book Discovery Call <i data-lucide="arrow-right" size="18"></i>
                 </a>
             </div>
 
-            <!-- Visual KPI Mockup Dashboard -->
+            <!-- Dynamic Animated Month-over-Month Spend Dashboard -->
             <div class="hero-dashboard">
-                <div class="dash-label">Target Spend Performance Profile</div>
+                <div class="dash-label">Month-Over-Month Spend Scaling</div>
                 <div class="dash-metric">$20,000<span style="font-size: 1.5rem; color: var(--clr-slate-muted);">/day</span></div>
                 <div class="dash-badge">
-                    <i data-lucide="trending-up" size="14"></i> High-Growth Scale Target Realized
+                    <i data-lucide="sparkles" size="14"></i> High-Velocity Optimization Active
                 </div>
+                
                 <div class="dash-chart">
-                    <div class="chart-pillar" style="height: 15%;"></div>
-                    <div class="chart-pillar" style="height: 25%;"></div>
-                    <div class="chart-pillar" style="height: 20%;"></div>
-                    <div class="chart-pillar" style="height: 45%;"></div>
-                    <div class="chart-pillar" style="height: 40%;"></div>
-                    <div class="chart-pillar" style="height: 70%;"></div>
-                    <div class="chart-pillar fill-sky" style="height: 98%;"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                    <div class="chart-pillar"></div>
+                </div>
+                <div class="chart-labels">
+                    <span>Mo 1</span>
+                    <span>Mo 2</span>
+                    <span>Mo 3</span>
+                    <span>Mo 4</span>
+                    <span>Mo 5</span>
+                    <span>Mo 6</span>
+                    <span>Scale</span>
                 </div>
             </div>
         </div>
@@ -646,41 +639,26 @@
         </div>
     </section>
 
-    <!-- Founder Section / Trust Building Elements -->
-    <section class="founder-section" id="about">
-        <div class="container founder-grid">
-            <!-- Exact binding of JPG assets verbatim -->
-            <div class="founder-visual">
-                <img src="IMG_6558.jpg" alt="Dane Funk - Utah Local Ads Founder">
-                <div class="founder-floating-card">
-                    <div class="founder-title">
-                        <h4>Dane Funk</h4>
-                        <p>Founder, Utah Local Ads</p>
-                    </div>
-                    <!-- Direct link parameter referencing exact local linkedin link -->
-                    <a href="https://www.linkedin.com/company/utahlocalads/" target="_blank" class="founder-li-icon">
-                        <i data-lucide="linkedin" size="22"></i>
-                    </a>
-                </div>
-            </div>
-
+    <!-- Experience / Track Record Block -->
+    <section class="track-record-section" id="track-record">
+        <div class="container track-grid">
             <div>
                 <div class="hero-tag" style="background-color: rgba(16, 185, 129, 0.08); color: var(--clr-success); border-color: rgba(16,185,129,0.15);">
-                    Expert Execution Only
+                    Proven Metrics
                 </div>
                 <h2 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.5rem;">Unrivaled Experience In Account Optimization</h2>
                 <p style="color: var(--clr-slate-muted); font-size: 1.05rem; margin-bottom: 1.25rem;">Our goal is simple: help businesses generate more visibility, more leads, and more revenue through data-driven advertising campaigns and high-converting creative.</p>
-                <p style="color: var(--clr-slate-muted); font-size: 1.05rem;">We turn your advertising budgets into a highly systematic growth engine, scaling daily spend with technical transparency and safety.</p>
+                <p style="color: var(--clr-slate-muted); font-size: 1.05rem;">Whether you're looking to increase local awareness, generate qualified leads, or scale your brand, Utah Local Ads helps turn marketing into a predictable growth channel.</p>
+            </div>
 
-                <div class="founder-stats">
-                    <div>
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Active Performance Accounts Managed &amp; Engineered</div>
-                    </div>
-                    <div>
-                        <div class="stat-value">4 Months</div>
-                        <div class="stat-label">Fastest Scale Timeframe from $1k to $20k Daily Ad Spend</div>
-                    </div>
+            <div class="track-stats">
+                <div class="stat-card">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Total Portfolio Accounts Historically Managed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4 Months</div>
+                    <div class="stat-label">Fastest Scale From $1k to $20k Daily Ad Spend</div>
                 </div>
             </div>
         </div>
