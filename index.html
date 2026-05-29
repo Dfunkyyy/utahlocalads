@@ -3,482 +3,718 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utah Local Ads | High-Performance Acquisition & Scale</title>
+    <title>Utah Local Ads | Performance-Driven Advertising Agency</title>
     
-    <!-- SEO & Indexing Infrastructure -->
+    <!-- SEO & Indexing Meta Setup -->
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://utahlocalads.com/">
-    <meta name="description" content="We engineer premium direct-response frameworks, paid acquisition funnels, and tracking infrastructure to scale local businesses efficiently.">
+    <meta name="description" content="Utah Local Ads is a performance-driven advertising agency helping businesses grow through Google Ads, Facebook & Instagram Ads, Copywriting, and Conversion Optimization.">
 
-    <!-- Lucide Icons & Inter Font -->
+    <!-- Premium Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 
     <style>
         :root {
-            --bg-main: #0b0f19;
-            --bg-card: #131926;
-            --bg-card-hover: #171f30;
-            --accent-glow: rgba(37, 99, 235, 0.15);
-            --accent-solid: #2563eb;
-            --accent-hover: #3b82f6;
-            --text-pure: #ffffff;
-            --text-body: #94a3b8;
-            --border-color: #1e293b;
+            --clr-white: #ffffff;
+            --clr-ice-bg: #f4f8fc;
+            --clr-light-blue: #e0f2fe;
+            --clr-sky-accent: #0ea5e9;
+            --clr-sky-hover: #0284c7;
+            --clr-slate-dark: #0f172a;
+            --clr-slate-muted: #475569;
+            --clr-border: #e2e8f0;
+            --clr-success: #10b981;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-main);
-            color: var(--text-pure);
+            background-color: var(--clr-white);
+            color: var(--clr-slate-dark);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .wrapper {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* Nav Bar styling */
+        /* Nav Bar - Clean White & Light-Blue Border */
         nav {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--clr-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 0;
         }
 
-        .brand-logo {
-            font-weight: 800;
-            font-size: 1.25rem;
-            letter-spacing: -0.02em;
-            color: var(--text-pure);
-        }
-
-        .brand-logo span {
-            color: var(--accent-solid);
-        }
-
-        .nav-cta {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--text-pure);
-            padding: 0.5rem 1.2rem;
-            border-radius: 99px;
+        .brand-logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
+            color: var(--clr-slate-dark);
         }
 
-        .nav-cta:hover {
-            background: var(--text-pure);
-            color: var(--bg-main);
+        .brand-logo-img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid var(--clr-border);
         }
 
-        /* Hero Layout mimicking premium multi-column agency flows */
-        .hero-section {
-            padding: 6rem 0 4rem 0;
+        .brand-name {
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-name span {
+            color: var(--clr-sky-accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--clr-slate-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--clr-sky-accent);
+        }
+
+        .nav-cta-btn {
+            background-color: var(--clr-sky-accent);
+            color: var(--clr-white) !important;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background-color 0.2s ease, transform 0.2s ease !important;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+        }
+
+        .nav-cta-btn:hover {
+            background-color: var(--clr-sky-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Area - Soft Ice Blue Background */
+        .hero {
+            background: linear-gradient(180deg, var(--clr-ice-bg) 0%, var(--clr-white) 100%);
+            padding: 6.5rem 0;
+            border-bottom: 1px solid var(--clr-border);
+        }
+
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .hero-badge {
-            background: var(--accent-glow);
-            color: var(--accent-hover);
-            border: 1px solid rgba(37, 99, 235, 0.3);
-            padding: 0.4rem 1rem;
-            border-radius: 99px;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .hero-tag {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            background-color: var(--clr-white);
+            color: var(--clr-sky-accent);
+            border: 1px solid var(--clr-border);
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
         }
 
         h1 {
             font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -0.04em;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
+            color: var(--clr-slate-dark);
         }
 
         h1 span {
-            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            background: linear-gradient(to right, #0ea5e9, #0284c7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-p {
             font-size: 1.15rem;
-            color: var(--text-body);
+            color: var(--clr-slate-muted);
             margin-bottom: 2.5rem;
-            max-width: 620px;
         }
 
-        /* Trust & Social Proof Architecture */
-        .v-proof-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--clr-sky-accent);
+            color: var(--clr-white);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+            transition: all 0.2s ease;
         }
 
-        .stat-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
+        .hero-cta:hover {
+            background-color: var(--clr-sky-hover);
+            transform: translateY(-2px);
         }
 
-        .stat-val {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--text-pure);
-            letter-spacing: -0.02em;
-        }
-
-        .stat-lbl {
-            font-size: 0.85rem;
-            color: var(--text-body);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .review-snippet {
-            font-size: 0.9rem;
-            color: var(--text-body);
-            font-style: italic;
+        /* Metric Graph Block - High Contrast Soft Blue & White Card */
+        .hero-dashboard {
+            background-color: var(--clr-white);
+            border: 1px solid var(--clr-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.05);
             position: relative;
         }
 
-        .review-author {
-            display: flex;
+        .dash-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--clr-slate-muted);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .dash-metric {
+            font-size: 3.25rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--clr-slate-dark);
+        }
+
+        .dash-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.35rem;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--clr-success);
+            padding: 0.3rem 0.8rem;
+            border-radius: 99px;
+            font-weight: 700;
             font-size: 0.85rem;
-            color: var(--text-pure);
-            font-style: normal;
-            font-weight: 600;
         }
 
-        /* Main Offer Grid */
-        .services-header {
+        .dash-chart {
+            border-top: 1px dashed var(--clr-border);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 100px;
+        }
+
+        .chart-pillar {
+            width: 12%;
+            background-color: var(--clr-ice-bg);
+            border-radius: 4px 4px 0 0;
+            height: 15%;
+        }
+
+        .chart-pillar.fill-sky {
+            background: linear-gradient(to top, var(--clr-sky-accent), #38bdf8);
+            box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+        }
+
+        /* Core Specializations Section */
+        .specs-section {
+            padding: 7rem 0;
+            background-color: var(--clr-white);
+        }
+
+        .section-header {
             text-align: center;
-            padding: 6rem 0 3rem 0;
+            max-width: 700px;
+            margin: 0 auto 4.5rem auto;
         }
 
-        .services-header h2 {
-            font-size: 2.25rem;
+        .section-header h2 {
+            font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.03em;
             margin-bottom: 1rem;
+            color: var(--clr-slate-dark);
         }
 
-        .services-header p {
-            color: var(--text-body);
-            max-width: 600px;
-            margin: 0 auto;
+        .section-header p {
+            color: var(--clr-slate-muted);
+            font-size: 1.1rem;
         }
 
-        .services-grid {
+        .specs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 8rem;
         }
 
-        .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
+        .spec-card {
+            background-color: var(--clr-white);
+            border: 1px solid var(--clr-border);
+            border-radius: 16px;
             padding: 2.5rem;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #334155;
-            background: var(--bg-card-hover);
+        .spec-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--clr-sky-accent);
+            background-color: var(--clr-ice-bg);
+            box-shadow: 0 12px 30px rgba(14, 165, 233, 0.03);
         }
 
-        .s-icon-box {
+        .spec-icon-box {
             width: 48px;
             height: 48px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background-color: var(--clr-ice-bg);
+            color: var(--clr-sky-accent);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-hover);
             margin-bottom: 1.5rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
-        .service-card h3 {
-            font-size: 1.3rem;
+        .spec-card:hover .spec-icon-box {
+            background-color: var(--clr-sky-accent);
+            color: var(--clr-white);
+        }
+
+        .spec-card h3 {
+            font-size: 1.35rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.02em;
+            color: var(--clr-slate-dark);
         }
 
-        .service-card p {
-            color: var(--text-body);
+        .spec-card p {
+            color: var(--clr-slate-muted);
             font-size: 0.95rem;
-            margin-bottom: 1.5rem;
         }
 
-        .card-tag-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: auto;
-            padding-top: 1.25rem;
-            border-top: 1px solid rgba(255,255,255,0.04);
+        /* Founder/Authority Block in Light-Blue & White Theme */
+        .founder-section {
+            background-color: var(--clr-ice-bg);
+            padding: 7.5rem 0;
+            border-top: 1px solid var(--clr-border);
+            border-bottom: 1px solid var(--clr-border);
         }
 
-        .card-tag-list li {
-            font-size: 0.8rem;
-            background: rgba(255,255,255,0.04);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            color: #cbd5e1;
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 5rem;
+            align-items: center;
         }
 
-        /* Action Footer Setup */
-        .footer-cta-block {
-            background: linear-gradient(135deg, #131926 0%, #0b0f19 100%);
-            border: 1px solid var(--border-color);
+        .founder-visual {
+            position: relative;
             border-radius: 24px;
-            padding: 5rem 2rem;
+            overflow: hidden;
+            background-color: var(--clr-white);
+            border: 1px solid var(--clr-border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+
+        .founder-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .founder-floating-card {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            padding: 1.25rem;
+            border-radius: 14px;
+            border: 1px solid var(--clr-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .founder-title h4 {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--clr-slate-dark);
+        }
+
+        .founder-title p {
+            font-size: 0.85rem;
+            color: var(--clr-slate-muted);
+            font-weight: 600;
+        }
+
+        .founder-li-icon {
+            color: var(--clr-sky-accent);
+            transition: color 0.2s ease;
+        }
+
+        .founder-li-icon:hover {
+            color: var(--clr-sky-hover);
+        }
+
+        .founder-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--clr-border);
+        }
+
+        .stat-value {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--clr-sky-accent);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--clr-slate-muted);
+            font-weight: 600;
+        }
+
+        /* Action Conversion Block */
+        .action-strip {
+            padding: 6.5rem 0;
             text-align: center;
-            margin-bottom: 6rem;
+            background-color: var(--clr-white);
+        }
+
+        .action-card {
+            background: linear-gradient(135deg, var(--clr-ice-bg) 0%, var(--clr-white) 100%);
+            border: 1px solid var(--clr-border);
+            color: var(--clr-slate-dark);
+            border-radius: 28px;
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 20px 45px rgba(14, 165, 233, 0.05);
         }
 
-        .footer-cta-block::before {
+        .action-card::before {
             content: '';
             position: absolute;
             top: -50%;
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 60%);
             pointer-events: none;
         }
 
-        .footer-inner {
+        .action-card h2 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
 
-        .main-action-btn {
+        .action-card p {
+            color: var(--clr-slate-muted);
+            max-width: 580px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.15rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .action-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            background: var(--accent-solid);
-            color: var(--text-pure);
+            gap: 0.5rem;
+            background-color: var(--clr-sky-accent);
+            color: var(--clr-white);
             text-decoration: none;
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 600;
+            padding: 1.1rem 2.5rem;
+            border-radius: 10px;
+            font-weight: 700;
             font-size: 1.05rem;
-            transition: background 0.2s ease;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 1;
         }
 
-        .main-action-btn:hover {
-            background: var(--accent-hover);
+        .action-btn:hover {
+            background-color: var(--clr-sky-hover);
+            transform: translateY(-2px);
         }
 
-        .sub-footer {
+        /* Footer Architecture */
+        footer {
+            background-color: var(--clr-white);
+            border-top: 1px solid var(--clr-border);
+            padding: 2.5rem 0;
+            color: var(--clr-slate-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-body);
-            font-size: 0.85rem;
         }
 
+        .footer-linkedin {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--clr-slate-dark);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-linkedin:hover {
+            color: var(--clr-sky-accent);
+        }
+
+        /* Responsive Breakpoint Adaptability */
         @media (max-width: 968px) {
-            .hero-section {
+            .hero-grid, .founder-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
-                padding: 4rem 0 2rem 0;
+                gap: 3.5rem;
             }
-            h1 { font-size: 2.75rem; }
+            h1 { font-size: 2.85rem; }
+            .action-card h2 { font-size: 2.15rem; }
+            .nav-links { display: none; } /* Standard collapse for compact viewports */
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <nav>
-            <div class="brand-logo">Utah Local Ads<span>.</span></div>
-            <a href="#book-strategy" class="nav-cta">Book Call</a>
-        </nav>
+    <!-- Nav Bar -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="brand-logo-wrapper">
+                <!-- Explicit verification of local logo asset parameters -->
+                <img src="utahlocalads_logo.jpeg" alt="Utah Local Ads Logo" class="brand-logo-img">
+                <span class="brand-name">Utah Local Ads<span>.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#specializations">Specializations</a>
+                <a href="#about">About</a>
+                <a href="https://calendly.com/danefunk/30min" target="_blank" class="nav-cta-btn">Book 15-Min Call</a>
+            </div>
+        </div>
+    </nav>
 
-        <!-- Hero Section -->
-        <section class="hero-section">
+    <!-- Hero Section with Ice-Blue Layout -->
+    <section class="hero">
+        <div class="container hero-grid">
             <div>
-                <div class="hero-badge">
-                    <i data-lucide="shield-check" size="14"></i> Enterprise-Grade Local Growth
+                <div class="hero-tag">
+                    <i data-lucide="award" size="14"></i> Direct-Response Focus
                 </div>
-                <h1>Built to Scale <span>Local Businesses</span> to 8 Figures.</h1>
-                <p class="hero-p">We architect high-volume paid acquisition channels, handle complex conversion tracking hurdles, and deploy direct-response assets to systematically scale local visibility and revenue.</p>
-                <a href="#book-strategy" class="main-action-btn">Book a Strategy Call <i data-lucide="arrow-right" size="18"></i></a>
+                <h1>Turn Ad Spend Into A <span>Predictable Revenue</span> Engine.</h1>
+                <p class="hero-p">Utah Local Ads is a performance-driven advertising agency focused on helping businesses grow through strategic digital marketing solutions. We build scalable marketing systems that turn marketing into a predictable growth channel.</p>
+                <a href="https://calendly.com/danefunk/30min" target="_blank" class="hero-cta">
+                    Book Discovery Call <i data-lucide="arrow-right" size="18"></i>
+                </a>
             </div>
 
-            <!-- Sleek Performance Box Meta Elements -->
-            <div class="v-proof-box">
-                <div class="stat-row">
-                    <div>
-                        <div class="stat-val">15.5M+</div>
-                        <div class="stat-lbl">Aggregate Views</div>
-                    </div>
-                    <div>
-                        <div class="stat-val">1M+</div>
-                        <div class="stat-lbl">Leads Generated</div>
-                    </div>
+            <!-- Visual KPI Mockup Dashboard -->
+            <div class="hero-dashboard">
+                <div class="dash-label">Target Spend Performance Profile</div>
+                <div class="dash-metric">$20,000<span style="font-size: 1.5rem; color: var(--clr-slate-muted);">/day</span></div>
+                <div class="dash-badge">
+                    <i data-lucide="trending-up" size="14"></i> High-Growth Scale Target Realized
                 </div>
-                <div class="review-snippet">
-                    "They built out the backend tracking structures and processes for my business to actually thrive once the localized ad traffic began scaling hard."
-                    <div class="review-author">
-                        <i data-lucide="badge-check" size="16" style="color: var(--accent-hover);"></i> Verified Business Partner
-                    </div>
+                <div class="dash-chart">
+                    <div class="chart-pillar" style="height: 15%;"></div>
+                    <div class="chart-pillar" style="height: 25%;"></div>
+                    <div class="chart-pillar" style="height: 20%;"></div>
+                    <div class="chart-pillar" style="height: 45%;"></div>
+                    <div class="chart-pillar" style="height: 40%;"></div>
+                    <div class="chart-pillar" style="height: 70%;"></div>
+                    <div class="chart-pillar fill-sky" style="height: 98%;"></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Core Mechanics Section -->
-        <section class="services-header">
-            <h2>The Growth Framework</h2>
-            <p>Predictable user acquisition doesn't happen by accident. We own the entire conversion engine.</p>
-        </section>
+    <!-- Specializations Matrix -->
+    <section class="specs-section" id="specializations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Specialties</h2>
+                <p>We work with businesses across a variety of industries to build scalable marketing systems that drive measurable growth online.</p>
+            </div>
 
-        <section class="services-grid">
-            <!-- 1. FB & IG Ads -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="layers" size="22"></i></div>
+            <div class="specs-grid">
+                <!-- Google Ads -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="search" size="22"></i></div>
+                    <h3>Google Ads</h3>
+                    <p>Capturing active high-intent demand to ensure your business answers exactly when prospects are looking for your services.</p>
+                </div>
+
+                <!-- Facebook & Instagram Ads -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="facebook" size="22"></i></div>
                     <h3>Facebook &amp; Instagram Ads</h3>
-                    <p>Hyper-targeted local campaigns built to command top-of-feed presence and feed high-intent prospects straight into your funnels.</p>
+                    <p>Building local dominance and driving high volumes of prospects to your landing pages with custom-tailored campaign structures.</p>
                 </div>
-                <ul class="card-tag-list">
-                    <li>Audience Exclusions</li>
-                    <li>Retargeting Funnels</li>
-                </ul>
-            </div>
 
-            <!-- 2. Copywriting -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="terminal" size="22"></i></div>
-                    <h3>Direct-Response Copywriting</h3>
-                    <p>Engineered messaging explicitly written to capture attention immediately, break conversion friction, and systematically overcome regional objections.</p>
+                <!-- Copywriting -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="edit-3" size="22"></i></div>
+                    <h3>Copywriting</h3>
+                    <p>Writing high-converting, direct-response copy that speaks directly to consumer problems and demands immediate action.</p>
                 </div>
-                <ul class="card-tag-list">
-                    <li>Angle Testing</li>
-                    <li>Ad Creative Hooks</li>
-                </ul>
-            </div>
 
-            <!-- 3. Lead Generation -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="target" size="22"></i></div>
-                    <h3>Predictable Lead Generation</h3>
-                    <p>Automated front-end workflows built to capture high-value prospective clients and keep client sales pipelines reliably packed.</p>
+                <!-- Lead Generation -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="users" size="22"></i></div>
+                    <h3>Lead Generation</h3>
+                    <p>Architecting predictable workflows to capture qualified prospects, feeding your sales pipe on autopilot.</p>
                 </div>
-                <ul class="card-tag-list">
-                    <li>CRM Workflows</li>
-                    <li>Instant Follow-ups</li>
-                </ul>
-            </div>
 
-            <!-- 4. Conversion Optimization -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="activity" size="22"></i></div>
+                <!-- Conversion Optimization -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="bar-chart-2" size="22"></i></div>
                     <h3>Conversion Optimization</h3>
-                    <p>Deep-dive landing page and offer audits designed to clean up performance bottlenecks and safely expand scale limits.</p>
+                    <p>Streamlining customer journeys to increase user conversion rates, getting you more leads out of every dollar spent.</p>
                 </div>
-                <ul class="card-tag-list">
-                    <li>Data Infrastructure</li>
-                    <li>Offer Optimization</li>
-                </ul>
-            </div>
 
-            <!-- 5. Creative Strategy -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="cpu" size="22"></i></div>
-                    <h3>Creative Strategy</h3>
-                    <p>Systematic development of conversion-focused asset frameworks, scripting hooks, and high-retention variation tests.</p>
+                <!-- Creative Strategy & Local Marketing -->
+                <div class="spec-card">
+                    <div class="spec-icon-box"><i data-lucide="map-pin" size="22"></i></div>
+                    <h3>Creative Strategy &amp; Local Ads</h3>
+                    <p>Merging local campaign setups with robust creative strategies to capture high-retention regional attention.</p>
                 </div>
-                <ul class="card-tag-list">
-                    <li>Asset Variations</li>
-                    <li>Retention Hooks</li>
-                </ul>
             </div>
+        </div>
+    </section>
 
-            <!-- 6. Local Business Marketing -->
-            <div class="service-card">
-                <div>
-                    <div class="s-icon-box"><i data-lucide="map" size="22"></i></div>
-                    <h3>Local Business Marketing</h3>
-                    <p>Bespoke acquisition structures mapped entirely around localized market capture and geographic ad spend efficiency.</p>
+    <!-- Founder Section / Trust Building Elements -->
+    <section class="founder-section" id="about">
+        <div class="container founder-grid">
+            <!-- Exact binding of JPG assets verbatim -->
+            <div class="founder-visual">
+                <img src="IMG_6558.jpg" alt="Dane Funk - Utah Local Ads Founder">
+                <div class="founder-floating-card">
+                    <div class="founder-title">
+                        <h4>Dane Funk</h4>
+                        <p>Founder, Utah Local Ads</p>
+                    </div>
+                    <!-- Direct link parameter referencing exact local linkedin link -->
+                    <a href="https://www.linkedin.com/company/utahlocalads/" target="_blank" class="founder-li-icon">
+                        <i data-lucide="linkedin" size="22"></i>
+                    </a>
                 </div>
-                <ul class="card-tag-list">
-                    <li>Geo-Target Scaling</li>
-                    <li>Market Dominance</li>
-                </ul>
             </div>
-        </section>
 
-        <!-- Dynamic Action Close -->
-        <section class="footer-cta-block" id="book-strategy">
-            <div class="footer-inner">
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.03em;">Ready to Remove Your Scaling Bottlenecks?</h2>
-                <p style="color: var(--text-body); max-width: 580px; margin: 0 auto 2.5rem auto; font-size: 1.05rem;">Let's audit your current landing page optimization layout, funnel math, and tracking setups to extract more margin from your daily spend.</p>
-                <!-- Connect booking widget link here -->
-                <a href="#" class="main-action-btn">Claim Your Strategy Session <i data-lucide="calendar" size="18"></i></a>
+            <div>
+                <div class="hero-tag" style="background-color: rgba(16, 185, 129, 0.08); color: var(--clr-success); border-color: rgba(16,185,129,0.15);">
+                    Expert Execution Only
+                </div>
+                <h2 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.5rem;">Unrivaled Experience In Account Optimization</h2>
+                <p style="color: var(--clr-slate-muted); font-size: 1.05rem; margin-bottom: 1.25rem;">Our goal is simple: help businesses generate more visibility, more leads, and more revenue through data-driven advertising campaigns and high-converting creative.</p>
+                <p style="color: var(--clr-slate-muted); font-size: 1.05rem;">We turn your advertising budgets into a highly systematic growth engine, scaling daily spend with technical transparency and safety.</p>
+
+                <div class="founder-stats">
+                    <div>
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Active Performance Accounts Managed &amp; Engineered</div>
+                    </div>
+                    <div>
+                        <div class="stat-value">4 Months</div>
+                        <div class="stat-label">Fastest Scale Timeframe from $1k to $20k Daily Ad Spend</div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="sub-footer">
-            <div>&copy; 2026 Utah Local Ads. Engineering Predictable Scale.</div>
-            <div>All Rights Reserved.</div>
-        </footer>
-    </div>
+    <!-- Direct Response Booking Block -->
+    <section class="action-strip">
+        <div class="container">
+            <div class="action-card">
+                <h2>Let's Map Out Your Growth Engine</h2>
+                <p>Book a 15-minute diagnostic call to review your current tracking architecture, ad angles, and scaling roadblocks.</p>
+                <a href="https://calendly.com/danefunk/30min" target="_blank" class="action-btn">
+                    Schedule Your 15-Min Call <i data-lucide="calendar" size="18"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Meta Layout -->
+    <footer>
+        <div class="container footer-flex">
+            <div>
+                <p>&copy; 2026 Utah Local Ads. Engineering Predictable Scale Frameworks.</p>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/company/utahlocalads/" target="_blank" class="footer-linkedin">
+                    <i data-lucide="linkedin" size="16"></i> Company LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Runs instant icon rendering engines cleanly
+        // Trigger quick icon updates across HTML modules
         lucide.createIcons();
     </script>
 </body>
